@@ -1,0 +1,15 @@
+# Получаем строку от пользователя
+text = input("Введите строку: ").lower().split()
+
+# Создаем словарь для подсчета
+word_count = {}
+
+for word in text:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+
+# Выводим результат
+for word, count in word_count.items():
+    print(f"{word}: {count}")
